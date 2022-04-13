@@ -1,0 +1,89 @@
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 120px;
+    background-color: #fff;
+    box-shadow: 0 4px 2px -2px #E9EDF3;
+    height: 64px;
+}
+
+.leftSide_date{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #899CB1;
+    margin-right: 86px;
+}
+.barWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-right: 56px;
+}
+.bar_label{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    color: #122945;
+}
+
+.bar{
+    width: 156px;
+    height: 6px;
+    border-radius: 12px;
+    background-color: #DEE6F5;
+    display: flex;
+}
+
+.bar_current{
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+}
+
+.bar_max{
+    height: 100%;
+}
+
+.searchWrapper{
+    user-select: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightSide_companyWrapper{
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0 36px 0 50px;
+    gap: 4px;
+    height: 100%;
+    padding: 0 0px 0 6px;
+}
+
+.rightSide_companyWrapper p {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: #899CB1;
+}
+
+.rightSide_profileWrapper{
+    cursor: pointer;
+    background-color: transparent;
+    gap: 4px;
+    height: 100%;
+    padding-left: 6px;
+}
+
+.rightSide_profileWrapper:hover,
+.rightSide_companyWrapper:hover{
+    background: rgba(216, 228, 251, 0.32);
+}

@@ -1,86 +1,51 @@
+import classNames from 'classnames'
 import './sidebar.css'
-const TabImg = (props: any) => (
-    <img alt='item' {...props} className='sidebar_tab__img' />
-)
-
-const tabs: any = {
-    Итоги: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='0'
-        />
-    ),
-    Заказы: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='1'
-        />
-    ),
-    Сообщения: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='2'
-        />
-    ),
-    Звонки: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='3'
-        />
-    ),
-    Контрагенты: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='4'
-        />
-    ),
-    Документы: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='5'
-        />
-    ),
-    Исполнители: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='6'
-        />
-    ),
-    Отчеты: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='7'
-        />
-    ),
-    'База знаний': (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='8'
-        />
-    ),
-    Настройки: (
-        <TabImg
-            src={require('../../assets/icons/sidebarIcons/calls.svg').default}
-            alt='9'
-        />
-    ),
-}
+import tabs from './src'
 
 const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className='sidebar_content'>
-                <div className='sidebar_content__logowrapper'>
-                    <img className='sidebar_logo' src={require('../../assets/logo/logo.svg').default} alt='logo' />
-                </div>
+                <a href='#' className='sidebar_content__logowrapper'>
+                    <img
+                        className='sidebar_logo'
+                        src={require('../../assets/logo/logo.svg').default}
+                        alt='logo'
+                    />
+                </a>
                 <ul>
                     {Object.keys(tabs).map((tabName: string, key) => (
-                        <li key={key}>
+                        <li
+                            className={classNames(
+                                'sidebar_list__item',
+                                key === 3 ? 'sidebar_list__item--active' : null
+                            )}
+                            key={key}
+                        >
                             {tabs[tabName]}
                             {tabName}
                         </li>
                     ))}
                 </ul>
+                <div className='sidebar_buttonsgroup' >
+                    <button className='buttonsgroup_item'>
+                        Добавить заказ{' '}
+                        <img
+                            className='buttonsgroup_item__img'
+                            src={require('../../assets/icons/sidebarIcons/plusButton.svg').default}
+                            alt='add'
+                        />
+                    </button>
+                    <button className='buttonsgroup_item'>
+                        Оплата{' '}
+                        <img
+                            className='buttonsgroup_item__img'
+                            style={{marginLeft: 11}}
+                            src={require('../../assets/icons/sidebarIcons/infoButton.svg').default}
+                            alt='add'
+                        />
+                    </button>
+                </div>
             </div>
         </div>
     )

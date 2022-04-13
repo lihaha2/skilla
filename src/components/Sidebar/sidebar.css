@@ -6,19 +6,104 @@
     color: #fff;
 }
 
-.sidebar_content{
-
-}
-
 .sidebar_content__logowrapper{
-
+    display: block;
+    margin: 20px 12px 32px 12px;
+    width: 109px;
+    height: 28px;
 }
 
 .sidebar_logo{
-
+    user-select: none;
 }
 
+.sidebar_list__item{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 13px;
+    max-height: 52px;
+    cursor: pointer;
+}
+
+.sidebar_list__item:hover{
+    background: rgba(216, 228, 251, 0.12)
+}
+
+.sidebar_list__item--active::before{
+    content: '';
+    width: 3;
+    height: 100%;
+    position: absolute;
+    border-left:3px solid #005FF8;
+    left: 0;
+}
+.sidebar_list__item--active{
+    position: relative;
+    color: #fff;
+    background: rgba(216, 228, 251, 0.32);
+}
+
+.sidebar_list__item--active::after{
+    content: '';
+    position: absolute;
+    right: 12px;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #FFD500;
+    box-shadow: 0px 3px 8px rgba(237, 218, 1, 0.5);
+}
+
+.sidebar_list__item--active:hover{
+    cursor: default;
+    background: rgba(216, 228, 251, 0.32);
+}
 
 .sidebar_tab__img{
-    width: 100
+    user-select: none;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar_buttonsgroup{
+    margin: 64px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+}
+
+.buttonsgroup_item{
+    cursor: pointer;
+    background: #005FF8;
+    border-radius: 4px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px 0 0;
+    gap: 17px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 148%;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.buttonsgroup_item:hover{
+    background: rgba(0, 95, 248, 0.8);
+}
+
+.buttonsgroup_item__img{
+    user-select: none;
+    width: 30px;
+    height: 30px;
 }
