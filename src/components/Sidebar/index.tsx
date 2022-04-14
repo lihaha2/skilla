@@ -6,7 +6,7 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className='sidebar_content'>
-                <a href='#' className='sidebar_content__logowrapper'>
+                <a href='/' className='sidebar_content__logowrapper'>
                     <img
                         className='sidebar_logo'
                         src={require('../../assets/logo/logo.svg').default}
